@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package execiciovetor;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author aluno
+ */
+public class Execiciovetor {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        // TODO code application logic here
+         String s="";
+        float nota1= 0; float media = 0; float soma = 0;
+        DataInputStream dado;
+        
+        
+        
+        Float notas[] = new Float[4];
+        for(int i = 1;i <= notas.length; i++){
+            System.out.println("Entre com a nota" + i);
+            dado = new DataInputStream(System.in);
+            s = dado.readLine();
+            nota1 = Float.parseFloat(s);
+            notas[i] = nota1;
+        
+            //soma =+ notas[i]; 
+    }
+        media = (notas [1] + notas[2] + notas[3] + notas[4]) /4;
+        System.out.println("Media " + media);
+  }
+}
