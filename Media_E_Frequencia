@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication4;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author aluno
+ */
+public class JavaApplication4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        // TODO code application logic here
+        String s="";
+        float nota1= 0;float nota2= 0; float media = 0; int frequencia = 0;
+        
+        DataInputStream dado;
+        System.out.println("Entre com a nota 1");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        nota1 = Float.parseFloat(s);
+        
+        System.out.println("Entre com a nota 2:");
+        dado = new DataInputStream(System.in);
+        s= dado.readLine();
+        nota2 = Float.parseFloat(s);
+        
+        System.out.println("Frequencia do aluno");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        frequencia = (int) Float.parseFloat(s);
+        
+        
+        media = (nota1 + nota2) / 2;
+        
+        if(media >= 7 && frequencia >= 75){
+        System.out.println("Aprovado");
+        }else{
+        System.out.println("Recuperação");
+        }
+        //System.out.println(media);
+        
+        
+        
+    }
+    
+}
