@@ -1,1 +1,32 @@
 
+pacote exercicioshow;
+
+importar java.io.DataInputStream;
+importar java.io.IOException;
+importar javax.swing.JOptionPane;
+
+/**
+*
+* @autor aluno
+*/
+public class ExercíciosHOW {
+
+    /**
+     * @param args os argumentos da linha de comando
+     */
+    public static void main(String[] args) throws IOException {
+        
+        String s = "";
+        String nota1 = nulo;
+        String nota2 = nulo;
+        mídia flutuante = 0;
+        
+        nota1 = JOptionPane.showInputDialog(null,"Entre com a nota 1: ");
+        JOptionPane.showMessageDialog(null,"Nota 1: " + nota1);
+        
+        nota2 = JOptionPane.showInputDialog(null,"Entre com a nota 2: ");
+        JOptionPane.showMessageDialog(null,"Nota 2: " + nota2);
+      
+        
+    }
+}
