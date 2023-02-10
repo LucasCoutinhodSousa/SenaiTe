@@ -1,32 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package caixadedialogo;
 
-pacote exercicioshow;
-
-importar java.io.DataInputStream;
-importar java.io.IOException;
-importar javax.swing.JOptionPane;
+import java.io.IOException;
+import javax.swing.JOptionPane;
 
 /**
-*
-* @autor aluno
-*/
-public class ExercíciosHOW {
+ *
+ * @author aluno
+ */
+public class CaixaDeDialogo {
 
     /**
-     * @param args os argumentos da linha de comando
+     * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
-        
+    public static void main(String[] args)  throws IOException{
+        // TODO code application logic here
         String s = "";
-        String nota1 = nulo;
-        String nota2 = nulo;
-        mídia flutuante = 0;
+        String n1 = "";
+        float nota1 = 0;
         
-        nota1 = JOptionPane.showInputDialog(null,"Entre com a nota 1: ");
-        JOptionPane.showMessageDialog(null,"Nota 1: " + nota1);
+        String n2 = "";
+        float nota2 = 0;
+        float media = 0;
         
-        nota2 = JOptionPane.showInputDialog(null,"Entre com a nota 2: ");
-        JOptionPane.showMessageDialog(null,"Nota 2: " + nota2);
+        n1 = JOptionPane.showInputDialog(null,"Entre com a nota 1: ");
+        nota1 = Float.parseFloat(n1);
+        //JOptionPane.showMessageDialog(null,"Nota 1: " + n1);
+        
+        n2 = JOptionPane.showInputDialog(null,"Entre com a nota 2: ");
+        nota1 = Float.parseFloat(n2);
+        //JOptionPane.showMessageDialog(null,"Nota 2: " + n2);
+        
+        media = (nota1 + nota2) /2;
+        JOptionPane.showMessageDialog(null,"Media " + media);
       
-        
     }
+    
 }
