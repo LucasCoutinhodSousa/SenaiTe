@@ -16,6 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
@@ -36,6 +37,13 @@ public class Formulario {
         janela.setBounds(100, 400, 300, 400);
         janela.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         
+                
+        FlowLayout flow = new FlowLayout();
+        Container caixa = janela.getContentPane();
+        caixa.setLayout(flow);
+        
+        JRadioButton masc, fem;
+        
         JLabel nomeProfessor = new JLabel();
         nomeProfessor.setText("NOME");
         
@@ -49,12 +57,13 @@ public class Formulario {
         JLabel pass = new JLabel();
         pass.setText("SENHA");
         
-        final JPasswordField senha = new JPasswordField(20);   
-        
-        FlowLayout flow = new FlowLayout();
-        Container caixa = janela.getContentPane();
-        caixa.setLayout(flow);
+        final JPasswordField senha = new JPasswordField(20);  
              
+        masc = new JRadioButton("Masculino" , false);
+        fem = new JRadioButton("Feminino" , false);
+        
+        JLabel sexo = new JLabel("Sexo");
+        
         
         janela.add(nomeProfessor);
         janela.add(nome);
@@ -64,7 +73,14 @@ public class Formulario {
         
         janela.add(pass);
         janela.add(senha);
+        
+        janela.add(sexo);
+        janela.add(masc);
+        janela.add(fem);
+        
         janela.add(new JButton("Entrar"));
+        
+        
         
         
         janela.setVisible(true);
