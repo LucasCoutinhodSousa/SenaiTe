@@ -8,6 +8,8 @@ package formulario;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.FlowLayout;
+import static java.awt.FlowLayout.LEFT;
+import static java.awt.FlowLayout.RIGHT;
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -31,21 +33,23 @@ public class Formulario {
         // TODO code application logic here
         
         JFrame janela = new JFrame("Formulario");
-        janela.setBounds(100, 400, 700, 300);
+        janela.setBounds(100, 400, 300, 400);
         janela.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         
         JLabel nomeProfessor = new JLabel();
-        nomeProfessor.setText("Nome");
+        nomeProfessor.setText("NOME");
         
-        JTextArea caixaParaNome = new JTextArea(1,20);
-        
-        JTextArea caixaParaCPF = new JTextArea(1, 20);
-        
+        JTextField nome = new JTextField(20);
+           
         JLabel cpf = new JLabel();
-        cpf.setText("cpf");
+        cpf.setText("CPF");
         
-        final JPasswordField senha = new JPasswordField();   
-        senha.setSize(20, 20);
+        JTextField caixaParaCPF = new JTextField(20);
+        
+        JLabel pass = new JLabel();
+        pass.setText("SENHA");
+        
+        final JPasswordField senha = new JPasswordField(20);   
         
         FlowLayout flow = new FlowLayout();
         Container caixa = janela.getContentPane();
@@ -53,15 +57,16 @@ public class Formulario {
              
         
         janela.add(nomeProfessor);
-        janela.add(caixaParaNome);
+        janela.add(nome);
         
         janela.add(cpf);
         janela.add(caixaParaCPF);
         
+        janela.add(pass);
         janela.add(senha);
+        janela.add(new JButton("Entrar"));
         
         
         janela.setVisible(true);
-    }
-    
+    }    
 }
